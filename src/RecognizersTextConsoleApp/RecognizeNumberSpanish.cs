@@ -21,5 +21,13 @@ namespace RecognizersTextConsoleApp
             //return result.ToString();
             return result[0].Resolution.Values.First().ToString();
         }
+
+
+        public string RecognizeOrdinal(string query)
+        {
+            var result = NumberRecognizer.RecognizeOrdinal(query, _culture);
+            return result[0].Resolution.Values.First().ToString();
+        }
+        
     }
 }
