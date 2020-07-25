@@ -35,6 +35,14 @@ namespace RecognizersTextConsoleApp
             var result = NumberRecognizer.RecognizePercentage(query, _culture);
             return result[0].Resolution.Values.First().ToString();
         }
+
+
+        public string RecognizeNumberRange(string query)
+        {
+            var result = NumberRecognizer.RecognizeNumberRange(query, _culture);
+            return result[0].Resolution.Values.First().ToString();
+        }
+
         
     }
 }
