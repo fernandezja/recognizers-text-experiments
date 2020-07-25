@@ -1,4 +1,8 @@
-﻿using Microsoft.Recognizers.Text.Number;
+﻿using Microsoft.Recognizers.Text.DateTime;
+using Microsoft.Recognizers.Text.Number;
+using Microsoft.Recognizers.Text.NumberWithUnit;
+using Microsoft.Recognizers.Text.Choice;
+using Microsoft.Recognizers.Text.Sequence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +47,5 @@ namespace RecognizersTextConsoleApp
             return result[0].Resolution.Values.First().ToString();
         }
 
-        
     }
 }
