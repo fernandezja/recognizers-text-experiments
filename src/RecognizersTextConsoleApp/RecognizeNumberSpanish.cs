@@ -28,6 +28,13 @@ namespace RecognizersTextConsoleApp
             var result = NumberRecognizer.RecognizeOrdinal(query, _culture);
             return result[0].Resolution.Values.First().ToString();
         }
+
+
+        public string RecognizePercentage(string query)
+        {
+            var result = NumberRecognizer.RecognizePercentage(query, _culture);
+            return result[0].Resolution.Values.First().ToString();
+        }
         
     }
 }

@@ -46,5 +46,21 @@ namespace RecognizersTextConsoleAppTest
 
         }
 
+
+        [Theory]
+        [InlineData("cero por ciento", "0%")]
+        [InlineData("un por ciento", "1%")]
+        [InlineData("quince %", "15%")]
+        [InlineData("cien por ciento", "100%")]
+        [InlineData("cien veinte por ciento", "120%")]
+        public void RecognizePercentageSimple(string phrase, string numberExpected)
+        {
+            var _sut = new RecognizeNumberSpanish();
+            var result = _sut.RecognizePercentage(phrase);
+
+            Assert.Equal(numberExpected, result);
+
+        }
+
     }
 }
