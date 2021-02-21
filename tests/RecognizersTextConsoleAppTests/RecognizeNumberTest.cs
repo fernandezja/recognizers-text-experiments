@@ -54,6 +54,8 @@ namespace RecognizersTextConsoleAppTest
         [InlineData("entre uno y dos", "[1,2)")]
         [InlineData("entre 10 y quince", "[10,15)")]
         [InlineData("entre veintidos y 33", "[22,33)")]
+        [InlineData("deberia estar entre 44 y 46", "[44,46)")]
+        [InlineData("los valores deberian ser entre cuarenta y uno y cincuenta", "[41,50)")]
         public void RecognizeNumberRangeSimple(string phrase, string valueExpected)
         {
             var _sut = new RecognizeNumberSpanish();
