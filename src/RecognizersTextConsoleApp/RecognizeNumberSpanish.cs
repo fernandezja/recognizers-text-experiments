@@ -19,11 +19,10 @@ namespace RecognizersTextConsoleApp
 
         }
 
-        public string RecognizeNumber(string query)
+        public SortedDictionary<string, object> RecognizeNumber(string query)
         { 
-            var result  = NumberRecognizer.RecognizeNumber(query, _culture);
-            //return result.ToString();
-            return result[0].Resolution.Values.First().ToString();
+            var result  = NumberRecognizer.RecognizeNumber(query, _culture);            
+            return result[0].Resolution;
         }
 
 

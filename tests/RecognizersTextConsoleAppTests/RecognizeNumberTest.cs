@@ -7,19 +7,20 @@ namespace RecognizersTextConsoleAppTest
     public class RecognizeNumberTest
     {
         [Theory]
-        [InlineData("Yo tengo dos manzanas", "2")]
-        [InlineData("Yo tengo 2 manzanas", "2")]
-        [InlineData("Yo tengo siete peras", "7")]
-        [InlineData("Yo tengo 7 peras", "7")]
-        [InlineData("Mis cincuenta centavos", "50")]
-        [InlineData("Ni dos pesos", "2")]
-        [InlineData("Mas vale pajaro en mano que cien volando", "100")]
-        public void RecognizeNumberSimple(string phrase, string numberExpected)
+        [InlineData("Yo tengo dos manzanas", "2", "integer")]
+        [InlineData("Yo tengo 2 manzanas", "2", "integer")]
+        [InlineData("Yo tengo siete peras", "7", "integer")]
+        [InlineData("Yo tengo 7 peras", "7", "integer")]
+        [InlineData("Mis cincuenta centavos", "50", "integer")]
+        [InlineData("Ni dos pesos", "2", "integer")]
+        [InlineData("Mas vale pajaro en mano que cien volando", "100", "integer")]
+        public void RecognizeNumberSimple(string phrase, string numberExpected, string subtypeExpected)
         {
             var _sut = new RecognizeNumberSpanish();
             var result = _sut.RecognizeNumber(phrase);
 
-            Assert.Equal(numberExpected, result);
+            Assert.Equal(subtypeExpected, result["subtype"]);
+            Assert.Equal(numberExpected, result["value"]);
 
         }
 
