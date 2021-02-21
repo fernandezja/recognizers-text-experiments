@@ -43,7 +43,9 @@ namespace RecognizersTextConsoleAppTest
             var _sut = new RecognizeNumberSpanish();
             var result = _sut.RecognizeOrdinal(phrase);
 
-            Assert.Equal(numberExpected, result);
+            Assert.Equal(numberExpected, result["offset"]);
+            Assert.Equal("start", result["relativeTo"]);
+            Assert.Equal(numberExpected, result["value"]);
 
         }
 
@@ -57,7 +59,7 @@ namespace RecognizersTextConsoleAppTest
             var _sut = new RecognizeNumberSpanish();
             var result = _sut.RecognizeNumberRange(phrase);
 
-            Assert.Equal(numberExpected, result);
+            Assert.Equal(numberExpected, result["value"]);
         }
 
 
