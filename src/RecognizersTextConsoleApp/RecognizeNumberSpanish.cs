@@ -19,32 +19,31 @@ namespace RecognizersTextConsoleApp
 
         }
 
-        public string RecognizeNumber(string query)
+        public SortedDictionary<string, object> RecognizeNumber(string query)
         { 
-            var result  = NumberRecognizer.RecognizeNumber(query, _culture);
-            //return result.ToString();
-            return result[0].Resolution.Values.First().ToString();
+            var result  = NumberRecognizer.RecognizeNumber(query, _culture);            
+            return result[0].Resolution;
         }
 
 
-        public string RecognizeOrdinal(string query)
+        public SortedDictionary<string, object> RecognizeOrdinal(string query)
         {
             var result = NumberRecognizer.RecognizeOrdinal(query, _culture);
-            return result[0].Resolution.Values.First().ToString();
+            return result[0].Resolution;
         }
 
 
-        public string RecognizePercentage(string query)
+        public SortedDictionary<string, object> RecognizePercentage(string query)
         {
             var result = NumberRecognizer.RecognizePercentage(query, _culture);
-            return result[0].Resolution.Values.First().ToString();
+            return result[0].Resolution;
         }
 
 
-        public string RecognizeNumberRange(string query)
+        public SortedDictionary<string, object> RecognizeNumberRange(string query)
         {
             var result = NumberRecognizer.RecognizeNumberRange(query, _culture);
-            return result[0].Resolution.Values.First().ToString();
+            return result[0].Resolution;
         }
 
     }

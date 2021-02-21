@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecognizersTextConsoleApp", "RecognizersTextConsoleApp\RecognizersTextConsoleApp.csproj", "{C16C01F5-A2EA-4C27-9BA1-030B923BA7B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecognizersTextConsoleAppTest", "..\test\RecognizersTextConsoleAppTest\RecognizersTextConsoleAppTest.csproj", "{D63BB63A-5007-46E1-996D-74C16C06B583}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E997F097-8A22-4038-8F9A-8C841ED0A744}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecognizersTextConsoleAppTests", "..\tests\RecognizersTextConsoleAppTests\RecognizersTextConsoleAppTests.csproj", "{FE0F52FE-4095-42EF-AE67-4BACB0155CB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,13 +19,16 @@ Global
 		{C16C01F5-A2EA-4C27-9BA1-030B923BA7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C16C01F5-A2EA-4C27-9BA1-030B923BA7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C16C01F5-A2EA-4C27-9BA1-030B923BA7B3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D63BB63A-5007-46E1-996D-74C16C06B583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D63BB63A-5007-46E1-996D-74C16C06B583}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D63BB63A-5007-46E1-996D-74C16C06B583}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D63BB63A-5007-46E1-996D-74C16C06B583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0F52FE-4095-42EF-AE67-4BACB0155CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0F52FE-4095-42EF-AE67-4BACB0155CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0F52FE-4095-42EF-AE67-4BACB0155CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0F52FE-4095-42EF-AE67-4BACB0155CB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FE0F52FE-4095-42EF-AE67-4BACB0155CB1} = {E997F097-8A22-4038-8F9A-8C841ED0A744}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C350773C-F5F3-4F90-AB51-85F8ADA0A3BD}
